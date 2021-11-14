@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylelightbox.css">
+  <script src="java.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>🚧</title>
+</head>
+<body>
+
+<!---Navbar--->
+<div class="navbar">
+  <div class="container flex">
+  <!---Logo--->
+  <div class="logo flex">
+    <img src="imgs/logo.png" alt="logo">
+    <h1 class="logo">Shelbyville, KY</h1>
+  </div>
+  <!---Logo end--->
+    <nav>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!---Navbar End--->
+
+
+
+<!---Panels--->
+<section class="box">
+  <div class="panel" id="gallery">
+          <!---Lightbox--->
+          <div class="row">
+            <div class="column">
+              <img src="imgs/img2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="imgs/img2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="imgs/img2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="imgs/img2.jpg"style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/shinji.png" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/guts.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/madoka.jpeg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/unit01.jpeg" style="width:100%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="images/shinji.png" style="width:100%" onclick="currentSlide(1)" alt="Shinji">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/guts.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Guts">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/madoka.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Madoka">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/unit01.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Unit01">
+                </div>
+              </div>
+          </div>
+          <!---Lightbox-End-->
+
+  </div>
+  <div class="panel" id="About">
+    <h2>About</h2>
+  </div>
+  <div class="panel" id="services">
+    <h2>evangelion</h2>
+  </div>
+  <div class="panel" id="contact">
+    <h2>contact</h2>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+       <form id="contact-form">
+           <input type="hidden" name="contact_number">
+           <label>Name</label>
+           <input type="text" name="user_name">
+           <label>Email</label>
+           <input type="email" name="user_email">
+           <label>Message</label>
+           <textarea name="message"></textarea>
+           <input type="submit" value="Send">
+       </form>
+  </div>
+</section>
+<!---Panels End--->
+
+<!---Lightbox Script--->
+<!-- <script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script> -->
+<!---Script-End-->
+
+</body>
+</html>
