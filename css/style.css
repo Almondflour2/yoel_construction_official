@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Lato', san-serif;
+  font-family: "Prompt", sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: black;
@@ -15,6 +15,7 @@ body {
 
 ul {
   list-style-type: none;
+  font-family: "Prompt", sans-serif;
 }
 
 a {
@@ -26,6 +27,7 @@ h1, h2 {
   font-weight: 300;
   line-height: 1.2;
   margin: 10px 0;
+  font-family: "Prompt", sans-serif;
 }
 
 p {
@@ -43,30 +45,79 @@ img {
 }
 
 /* navbar */
+.navbar {
+  padding: 10px;
+  background-color: pink;
+  color: #000;
+  height: 140px;
+  position: sticky; top: 0;
+}
+.container {
+  height: 120px;
+  margin: 0 -5px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+}
 .logo {
-  margin: 0 20px;
+  flex-basis: 25%;
+  flex-grow: 2;
+  margin-right: 15px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.bas {
+  margin-top: -5px;
+  align-self: flex-start;
+  white-space: nowrap;
+  margin: 0;
+}
+.nav {
+  flex-wrap: nowrap;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+}
+.nav a {
+  color: #000;
+  padding-right: 10px;
+  margin: 0 0px;
+  justify-content: space-around;
+  flex-shrink: 2;
+  align-self: flex-start;
+}
+.nav a:hover {
+  border-bottom: 2px #000 solid;
 }
 
-.navbar {
-  background-color: #695f96;
-  color: #fff;
-  height: var(--nav-height);
-  position: sticky; top: 0;
+/* .logo {
+    align-self: flex-start;
 }
 
 .navbar ul {
   display: flex;
+  flex-shrink: 3;
+  justify-content: space-around;
 }
 
 .navbar a {
   color: #fff;
   padding: 10px;
   margin: 0 5px;
+  justify-content: space-around;
+  flex-shrink: 2;
 }
 
-.navbar a:hover {
-  border-bottom: 2px #fff solid;
-}
+
 
 .navbar .flex {
   justify-content: space-between;
@@ -81,10 +132,12 @@ img {
 
 .flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items:flex-start;
   height: 100%;
-}
+} */
+
+
 
 /* css for box panels */
 
@@ -102,4 +155,16 @@ img {
   display: flex;
   flex-direction: column;
   flex-shrink: 2;
+}
+
+@media only screen and (min-width: 600px) /*tablet*/ {
+  .panel {
+      background-color: #000;
+    }
+}
+
+@media only screen and (min-width: 1025px) /*desktop*/ {
+  .panel {
+      background-color: #000034;
+    }
 }

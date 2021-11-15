@@ -10,21 +10,26 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  row-gap: 0;
+  flex-wrap: wrap;
 }
 
 .row > .column {
   display: flex;
   justify-content: space-around;
+  flex: 50%;
 }
 
 .row:after {
   /* content: ""; */
   display: flex;
   clear: both;
+  row-gap: 0;
 }
 
 .column {
   display: flex;
+  row-gap: 0;
 }
 
 /* The Modal (background) */
