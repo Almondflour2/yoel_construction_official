@@ -8,15 +8,16 @@ body {
 }
 
 .row {
+  gap: 0px;
   display: flex;
   flex-direction: row;
-  row-gap: 0;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .row > .column {
+  gap: 0px;
   display: flex;
-  justify-content: space-around;
   flex: 50%;
 }
 
@@ -24,12 +25,12 @@ body {
   /* content: ""; */
   display: flex;
   clear: both;
-  row-gap: 0;
+  flex-wrap: wrap;
 }
 
 .column {
   display: flex;
-  row-gap: 0;
+  flex-wrap: wrap;
 }
 
 /* The Modal (background) */
@@ -121,7 +122,8 @@ body {
 }
 
 img {
-  margin-bottom: auto;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .caption-container {
@@ -141,9 +143,17 @@ img {
 }
 
 img.hover-shadow {
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (min-width: 600px) /*tablet*/ {
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 }

@@ -34,10 +34,6 @@ p {
   margin: 10px 0;
 }
 
-img {
-  max-width: 90%;
-  max-height: 90%;
-}
 
 /*variable declaration*/
 :root {
@@ -53,23 +49,31 @@ img {
   position: sticky; top: 0;
 }
 .container {
-  height: 120px;
-  margin: 0 -5px;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: flex-start;
 }
 .logo {
+  margin: 20px;
+  margin-top: 10px;
   flex-basis: 25%;
-  flex-grow: 2;
-  margin-right: 15px;
+  /* flex-grow: 1; */
+  flex: 1;
+  padding: 10px 0px 10px 12px;
+  border: 1px solid #000;
+  align-self: center
+}
+.logo > img {
+  max-width: 90%;
+  max-height: 90%;
 }
 .info {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex: 1;
+  flex: 3;
   flex-wrap: wrap;
 }
 .bas {
@@ -146,7 +150,10 @@ img {
   display: flex;
   flex-direction: column;
 }
-
+.card {
+  display: flex;
+  justify-content: flex-start;
+}
 .panel {
   scroll-margin-top: var(--nav-height);
   min-height: 80vh;
@@ -154,7 +161,7 @@ img {
   background-color: #D6E1F4;
   display: flex;
   flex-direction: column;
-  flex-shrink: 2;
+  /* flex-shrink: 2; */
 }
 
 @media only screen and (min-width: 600px) /*tablet*/ {
