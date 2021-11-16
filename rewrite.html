@@ -7,47 +7,125 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/rewrite.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+  <link rel="stylesheet" href="css/stylelightbox.css">
   <script src="rewrite.js"></script>
   <title>🚧</title>
 </head>
 
 <body>
+<!-- link to top of page -->
+<div id="#top"></div>
 
 <!-- top header -->
 <div class="headercontainer">
-  <h1>hey i'll have a concrete</h1>
+  <a href="#top"><img class="logo" src="/imgs/logo.png"></a>
+  <div class="vl"></div>
+  <h1>Yoel Construction Shelbyville, KY</h1>
 </div>
 <!-- end top header -->
 
 <!-- sticky header -->
 <div class="stickyheadercontainer" id="stickyHeader">
-  <h2>well i want stone</h2>
+  <div class="stickylogo" id="myStickylogo">
+    <a href="#top"><img class="stickylogoimg" src="/imgs/logosmall.png"></a>
+  </div>
+  <ul class="linksli">
+    <li><a href="#gallery">gallery</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <div class="spacer"></div>
   <script src="rewrite.js"></script> <!-- javascript for stickyness -->
+
 </div>
 <!-- end sticky header -->
 
 <!-- page content panels  -->
 <div class="panelscontainer">
     <!-- gallery -->
-    <div class="panel gallerycontainer">
+    <div class="panel gallerycontainer" id="gallery">
       <h2>gallery</h2>
       <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
-    </div>
+      <div class="gallery">
+      <script src="/old/java.js"></script>
+            <div class="galleryitem">
+              <img src="imgs/img2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="galleryitem">
+              <img src="imgs/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="galleryitem">
+              <img src="imgs/img2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="galleryitem">
+              <img src="imgs/img2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+      </div>
+
+      <!-- lightbox modal -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="imgs/img3.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="imgs/img3.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="imgs/img3.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="imgs/img3.jpg" style="width:100%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+
+              <div class="column">
+                <img class="demo cursor" src="imgs/img3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="imgs/img3.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="imgs/img3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="imgs/img3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+            </div>
+          </div>
+      </div>
     <!-- end gallery -->
     <!-- about -->
-    <div class="panel aboutcontainer">
-      <h2>about</h2>
+    <div class="panel aboutcontainer" id="about">
+      <h2 class="about">about</h2>
       <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
     </div>
     <!-- end about -->
     <!-- services -->
-    <div class="panel servicescontainer">
+    <div class="panel servicescontainer" id="services">
       <h2>services</h2>
       <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
     </div>
     <!-- end services -->
     <!-- contact -->
-    <div class="panel contactcontainer">
+    <div class="panel contactcontainer" id="contact">
       <h2>contact</h2>
       <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
     </div>

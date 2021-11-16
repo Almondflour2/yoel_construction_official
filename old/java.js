@@ -1,3 +1,5 @@
+console.log('SUCCESS!')
+
 // lightbox script
 function openModal() {
   document.getElementById("myModal").style.display = "block";
