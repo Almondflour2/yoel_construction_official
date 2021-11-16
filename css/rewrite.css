@@ -1,0 +1,82 @@
+/* universals */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  color: #333;
+  background-color: darkslategray;
+}
+
+/* top header */
+.headercontainer {
+  display: flex;
+  padding: 30px;
+}
+/* end top header */
+
+/* sticky header */
+      /* styling */
+      .stickyheadercontainer {
+        display: flex;
+        background-color: deepskyblue;
+      }
+      /* sticky header js + peripherals */
+      /* javascript add sticky class */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      /* to prevent sudden jumping */
+      .sticky + .panelscontainer {
+        padding-top: 102px;
+      }
+      /* end sticky header peripherals  */
+/* end sticky header */
+
+/* page content panels structure only */
+      .panelscontainer {
+        display: flex;
+        flex-direction: column;
+      }
+/* end page content panels structure */
+
+/* gallery */
+.gallerycontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: blanchedalmond;
+  flex-direction: column;
+}
+
+.gallerycontainer * {
+  background-color: wheat;
+}
+
+/* about */
+.aboutcontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: slateblue;
+}
+/* services */
+.servicescontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: lime;
+}
+/* contact */
+.contactcontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: plum;
+}
