@@ -4,8 +4,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 10px;
-  column-gap: 0;
+  row-gap: 2px;
+  column-gap: 2px;
+
 }
 
 .gallery > .galleryitem {
@@ -25,15 +26,29 @@
 }
 
 .galleryitem {
+  background-size: contain;
+  background-color: darkseagreen;
   padding: 0;
   display: flex;
+  object-fit: cover;
   flex-wrap: wrap;
   /* width: 100%;
   height: 100%; */
   flex: 1;
+
+}
+
+.gallery img {
+  flex-shrink: 1;
+  max-width: 200px;
+  max-height: 100%;
+  object-fit: cover;
+
 }
 
 .galleryitem img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -61,6 +76,14 @@
   max-width: 1200px;
 }
 
+ .column {
+  padding: 0 8px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
 /* The Close Button */
 .close {
   color: white;
@@ -125,7 +148,7 @@
   top: 0;
 }
 
-img {
+.column img {
   max-width: 90%;
   max-height: 90%;
 }
@@ -146,18 +169,10 @@ img {
   opacity: 1;
 }
 
-img.hover-shadow {
+div.hover-shadow {
   transition: .3s;
 }
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-@media only screen and (min-width: 600px) /*tablet*/ {
-    .row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
 }

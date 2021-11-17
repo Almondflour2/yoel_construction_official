@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: "Prompt", sans-serif;
   color: #333;
-  background-color: darkslategray;
+   background-image: linear-gradient(#8BA7A8, #E2E4E4, #DFE7E7);
 }
 
 /* top header */
@@ -19,7 +19,7 @@ body {
   column-gap: 10px;
   justify-content: center;
   align-items: center;
-  background-color: papayawhip;
+  background-color: #596F70;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .headercontainer a {
@@ -58,7 +58,7 @@ body {
       /* styling */
       .stickyheadercontainer {
         display: flex;
-        background-color: deepskyblue;
+        background-color: #8BA7A8;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2) inset;
         justify-content: space-around;
         align-items: center;
@@ -139,12 +139,9 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
   flex-direction: column;
-}
-
-.gallerycontainer * {
-  background-color: wheat;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 /* about */
@@ -152,22 +149,116 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: slateblue;
-  flex-direction: column;
+  /* background-color: darkgray; */
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* .panelpadding {
+  height: 100px;
+} */
+.abtcontent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 60%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  /* flex: 1; */
+}
+.fambizpic {
+  margin: 0;
+  flex: 2 0 50%;
+  max-width: 50%;
+}
+.familybusiness {
+  margin: 0;
+  flex: 1 0 50%;
+}
+.br {
+  flex-basis 100%;
+  height: 0;
+}
+.cheese {
+  flex: 0 1 100%;
 }
 /* services */
 .servicescontainer {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: lime;
+  /* background-color: lime; */
+  flex-flow: row wrap;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+.servicetitle {
+  margin: 0;
+  flex: 0 1 100%;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Monsieur La Doulaise", cursive;
+  font-size: 7vmin;
+}
+.servicecards {
+  display: flex;
   flex-direction: column;
+  width: 90%;
+  height: 100%;
+  justify-content: space-around;
+}
+.card {
+  /* background-color: snow; */
+  padding: 10px;
+  margin: 10px;
+  min-height: 40vmin;
+  flex: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.card h1 {
+    font-family: "Monsieur La Doulaise", cursive;
+}
+.card p {
+  font-size: 3vmin;
 }
 /* contact */
 .contactcontainer {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: plum;
+  /* background-color: plum; */
   flex-direction: column;
+  justify-content: center;
+}
+.contactcontainer h2 {
+  text-align: center;
+  font-family: "Dokdo", cursive;
+}
+.contactcontainer p {
+  margin: 30px;
+  text-align: justify;
+}
+/* end contact */
+
+/* footer */
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsla(0, 100%, 50%, 0.3);;
+  color: white;
+  text-align: right;
+  font-size: 2.3vmin;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 600px) /*tablet*/ {
+/* make service cards display as a row */
+  .servicecards {
+    flex-direction: row;
+  }
 }

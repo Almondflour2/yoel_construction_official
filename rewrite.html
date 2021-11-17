@@ -7,7 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/rewrite.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" href="https://fonts.googleapis.com/css?family=Dokdo">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dokdo">
   <link rel="stylesheet" href="css/stylelightbox.css">
+  <link rel="stylesheet" href="css/contactform.css">
   <script src="rewrite.js"></script>
   <title>🚧</title>
 </head>
@@ -45,22 +48,20 @@
 <div class="panelscontainer">
     <!-- gallery -->
     <div class="panel gallerycontainer" id="gallery">
-      <h2>gallery</h2>
-      <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
       <div class="gallery">
       <script src="/old/java.js"></script>
-            <div class="galleryitem">
+            <!-- <div class="galleryitem" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" style="background-image: url('imgs/img2.jpg')"> -->
               <img src="imgs/img2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-            </div>
-            <div class="galleryitem">
+            <!-- </div> -->
+            <!-- <div class="galleryitem"> -->
               <img src="imgs/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-            </div>
-            <div class="galleryitem">
+            <!-- </div> -->
+            <!-- <div class="galleryitem"> -->
               <img src="imgs/img2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-            </div>
-            <div class="galleryitem">
+            <!-- </div> -->
+            <!-- <div class="galleryitem"> -->
               <img src="imgs/img2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-            </div>
+            <!-- </div> -->
       </div>
 
       <!-- lightbox modal -->
@@ -114,24 +115,66 @@
     <!-- end gallery -->
     <!-- about -->
     <div class="panel aboutcontainer" id="about">
-      <h2 class="about">about</h2>
-      <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
+      <div class="abtcontent">
+          <div class="fambizpic"><img src="/imgs/familybusiness.png"></div>
+          <div class="familybusiness"><h3>family business ( ◜◒◝ )♡</h3></div>
+          <div class="br"></div>
+          <div class="cheese"><p>Manchego the big cheese pepper jack. Cauliflower cheese pecorino emmental when the cheese comes out everybody's happy boursin camembert de normandie roquefort lancashire. Hard cheese roquefort rubber cheese airedale cheese on toast bavarian bergkase cheesy grin fondue. The big cheese cut the cheese cheese on toast airedale taleggio fromage frais.</p></div>
+      </div>
     </div>
     <!-- end about -->
     <!-- services -->
     <div class="panel servicescontainer" id="services">
-      <h2>services</h2>
-      <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
+      <div class="servicetitle"><h1>Services</h1></div>
+      <div class="servicecards">
+        <div class="card"><h1>stone</h1><p>Say cheese cheese on toast cheese strings. Swiss smelly cheese melted cheese taleggio the big cheese ricotta boursin chalk and cheese. Halloumi cheese slices airedale who moved my cheese</p></div>
+        <div class="card"><h1>stone</h1><p>feta squirty cheese camembert de normandie cauliflower cheese taleggio. Red leicester cheese strings taleggio stinking bishop port-salut gouda taleggio edam. Danish fontina.</p></div>
+        <div class="card"><h1>stone</h1><p>Cheeseburger the big cheese cheesy grin. Cheeseburger emmental feta monterey jack parmesan blue castello chalk and cheese gouda. Stilton edam fromage frais</p></div>
+      </div>
     </div>
     <!-- end services -->
     <!-- contact -->
     <div class="panel contactcontainer" id="contact">
       <h2>contact</h2>
+      <p>leave your name and number and favorite flavor of snow cone and weeeelll get back to you</p>
       <p>cornsilk #fff8dc crimson #dc143c darkblue #00008b darkcyan #008b8b darkgoldenrod #b8860b darkgray #a9a9a9 darkgreen #006400 darkkhaki #bdb76b darkmagenta #8b008b darkolivegreen #556b2f darkorange #ff8c00 darkorchid #9932cc darkred #8b0000 darksalmon #e9967a darkseagreen #8fbc8f </p>
+      <section>
+        <div class="contact-form card">
+          <h2>Favorite Snow Cone Flavor</h2>
+          <form action="https://formspree.io/f/xnqledvw" method="POST">
+
+            <div class="form-control">
+              <!-- <label for="firstName">First Name</label> -->
+              <input type="text" placeholder="First Name" name="firstName">
+            </div>
+
+            <div class="form-control">
+              <!-- <label for="lastName">Last Name</label> -->
+              <input type="text" placeholder="Last Name" name="lastName">
+            </div>
+
+            <div class="form-control">
+              <!-- <label for="email">Email</label> -->
+              <input type="email" placeholder="Email" name="_replyto">
+            </div>
+
+            <div class="form-control">
+              <!-- <label for="message">Message</label> -->
+              <textarea type="text" placeholder="Message" name="message" cols="45" rows="6"></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div
+      </section>
     </div>
     <!-- end contact -->
 </div>
 <!-- end page content panels -->
+
+<div class="footer">
+  <p>㇏(•̀ᵥᵥ•́)ง✿ 2021 Isabella "Almond"</p>
+</div>
 
 </body>
 
