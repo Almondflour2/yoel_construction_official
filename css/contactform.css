@@ -1,5 +1,5 @@
 :root{
-  --primary-color: #933eff;
+  --primary-color: #B48EAE;
 }
 
 .contactcontainer section {
@@ -7,15 +7,15 @@
   justify-content: flex-end;
   height: 100%;
   width: 100%;
+  margin-right: 50px;
 }
 .contact-form {
 
-}
 
+}
 .contact-form .form-control {
   margin: 15px 0;
 }
-
 .contact-form input[type='text'],
 .contact-form input[type='email'] {
   border: 0;
@@ -45,14 +45,32 @@
 }
 
 .contact-form.card {
-  background-color: pink;
+  background-color: #B48EAE;
   color: #333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  margin: 10px;
+  margin: 0 2em 0 2em;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+@media only screen and (min-width: 600px) /*tablet*/ {
+  .contact-form.card {
+    margin: 0 7em 0 7em;
+  }
 }
 
-textarea {
-
+@media only screen and (min-width: 800px) /*desktop*/ {
+    .contact-form.card {
+      background-color: lime;
+      margin: 0 20em 0 20em;
+      width: 100% !important;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
 }

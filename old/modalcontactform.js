@@ -1,5 +1,25 @@
 console.log('SUCCESS!')
 
+// sticky header
+window.onscroll = function() {myFunction()};
+
+var stickyheadercontainer = document.getElementById("stickyHeader");
+var sticky = stickyheadercontainer.offsetTop;
+var stickylogo = document.getElementById("myStickylogo");
+
+stickylogo.style.visibility ='hidden';
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    stickyheadercontainer.classList.add("sticky");
+    stickylogo.style.visibility = 'visible';
+  } else {
+    stickyheadercontainer.classList.remove("sticky");
+    stickylogo.style.visibility = 'hidden';
+  }
+}
+// end sticky
+
 // lightbox script
 function openModal() {
   document.getElementById("myModal").style.display = "block";
@@ -37,6 +57,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+//end lightbox script
 
 // Contact sendForm
    (function() {

@@ -4,14 +4,12 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   margin: 0;
   font-family: "Prompt", sans-serif;
   color: #333;
-   background-image: linear-gradient(#8BA7A8, #E2E4E4, #DFE7E7);
+   background-image: linear-gradient(#B48EAE, #BAACBD, #C9C5CB, #D7D9D7);
 }
-
 /* top header */
 .headercontainer {
   display: flex;
@@ -19,13 +17,11 @@ body {
   column-gap: 10px;
   justify-content: center;
   align-items: center;
-  background-color: #596F70;
+  background-color: #D7D9D7;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .headercontainer a {
   display: flex;
-  width: 100%;
-  height: 100%;
   flex: 1;
 }
 .logo {
@@ -34,7 +30,6 @@ body {
   height: 100%;
   margin-left: 10px;
 }
-
 .vl {
   border-left: 3px solid black;
   height: 90px;
@@ -42,12 +37,11 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 .headercontainer h1 {
+  color: black;
+  font-family: "Dokdo", sans-serif;
   flex: 3;
   font-size: 25px;
-  width: 50%%;
-  height: 100%;
   margin-top: -9px;
   align-items: center;
   word-wrap: nowrap;
@@ -58,43 +52,37 @@ body {
       /* styling */
       .stickyheadercontainer {
         display: flex;
-        background-color: #8BA7A8;
-        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2) inset;
         justify-content: space-around;
         align-items: center;
-        flex-direction: row:
+        background-color: #B48EAE;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2) inset;
+        padding-left: 10px;
       }
       .stickylogo {
-        display: flex;
         flex: 1;
-        justify-content: center;
       }
       .stickylogoimg {
+        max-width: 75px;
         width: 100%;
-        margin: 8px;
       }
       .stickylogo > a {
         display: flex;
+        margin: 0;
+        justify-content: center;
       }
     /* links styling */
       .linksli {
         display: flex;
         flex: 7;
         justify-content: center;
-        align-self: center;
-        flex-wrap: nowrap;
-      }
-      .linksli > p {
-        font-size: 30vw;
+        align-items: center;
       }
       .linksli li {
         padding: 2vmax;
-        color: orange;
         list-style-type: none;
         font-size: 100%;
       }
       .linksli a {
-        font-weight: lighter;
         color: #004e68;
         margin: 0 0px;
         justify-content: space-around;
@@ -128,10 +116,10 @@ body {
 /* end sticky header */
 
 /* page content panels structure only */
-      .panelscontainer {
-        display: flex;
-        flex-direction: column;
-      }
+.panelscontainer {
+  display: flex;
+  flex-direction: column;
+}
 /* end page content panels structure */
 
 /* gallery */
@@ -143,46 +131,55 @@ body {
   padding-top: 50px;
   padding-bottom: 100px;
 }
+.gallery {
+  gap: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  row-gap: 2px;
+  column-gap: 2px;
+
+}
+.gallery img {
+  flex-shrink: 1;
+  max-width: 45%;
+  object-fit: cover;
+}
 
 /* about */
 .aboutcontainer {
   display: flex;
   width: 100%;
   height: 100%;
-  /* background-color: darkgray; */
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-flow: row;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  justify-content: center;
 }
-/* .panelpadding {
-  height: 100px;
-} */
 .abtcontent {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 60%;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  padding: 30px;
+}
+.badge {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.abtcontent img {
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
   /* flex: 1; */
 }
-.fambizpic {
-  margin: 0;
-  flex: 2 0 50%;
-  max-width: 50%;
+.abtcontent h3, .abtcontent p {
+  text-align: center;
+  padding: 10px;
 }
-.familybusiness {
-  margin: 0;
-  flex: 1 0 50%;
-}
-.br {
-  flex-basis 100%;
-  height: 0;
-}
-.cheese {
-  flex: 0 1 100%;
-}
+
 /* services */
 .servicescontainer {
   display: flex;
@@ -200,7 +197,7 @@ body {
   max-width: 100%;
   text-align: center;
   font-family: "Monsieur La Doulaise", cursive;
-  font-size: 7vmin;
+  font-size: 1.5em;
 }
 .servicecards {
   display: flex;
@@ -210,7 +207,6 @@ body {
   justify-content: space-around;
 }
 .card {
-  /* background-color: snow; */
   padding: 10px;
   margin: 10px;
   min-height: 40vmin;
@@ -222,13 +218,15 @@ body {
     font-family: "Monsieur La Doulaise", cursive;
 }
 .card p {
-  font-size: 3vmin;
+  font-size: 13px;
 }
 /* contact */
 .contactcontainer {
   display: flex;
   width: 100%;
   height: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
   /* background-color: plum; */
   flex-direction: column;
   justify-content: center;
@@ -236,10 +234,11 @@ body {
 .contactcontainer h2 {
   text-align: center;
   font-family: "Dokdo", cursive;
+  font-size: 1.5em;
 }
 .contactcontainer p {
   margin: 30px;
-  text-align: justify;
+  text-align: center;
 }
 /* end contact */
 
@@ -248,17 +247,102 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: hsla(0, 100%, 50%, 0.3);;
+  background-color: #B48EAE;
   color: white;
   text-align: right;
   font-size: 2.3vmin;
 }
 
-/* media queries */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
 
 @media only screen and (min-width: 600px) /*tablet*/ {
-/* make service cards display as a row */
+/* top header */
+.headercontainer h1 {
+    align-self: center;
+    font-size: 2.5em;
+    text-align: center;
+}
+.vl {
+  border-left: none;
+}
+/* end top header */
+/* sticky header */
+.linksli li {
+  font-size: 1.2em;
+}
+/* end sticky header */
+/* gallery */
+.gallery img {
+  flex-shrink: 1;
+  max-width: 257px;
+  width: 100%;
+  object-fit: cover;
+}
+/* end gallery */
+/* services */
+.card p {
+  font-size: 3vmin;
+}
+/* end services */
+
+@media only screen and (min-width: 800px) /*desktop*/ {
+  /* top header */
+  .headercontainer {
+    padding: 30px;
+  }
+  .headercontainer h1 {
+      align-self: center;
+      font-size: 2.5em;
+      text-align: center;
+  }
+  .headercontainer a {
+    display: flex;
+    /* width: 100%;
+    height: 100%; */
+    flex: 1;
+    justify-content: center;
+  }
+
+  .vl {
+    border-left: none;
+  }
+  .logo {
+    align-self: center;
+    max-width: 150px;
+    margin-left: 10px;
+  }
+  /* end top header */
+  /* make service cards display as a row */
   .servicecards {
     flex-direction: row;
   }
+  .card {
+
+  }
+  .card h1 {
+      font-family: "Monsieur La Doulaise", cursive;
+      font-size: 3em;
+  }
+  .card p {
+    font-size: 2vmin;
+  }
+/* gallery display image resize */
+.gallery {
+  flex-flow: row nowrap;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 450px;
+}
+/* contact text */
+.contactcontainer h2 {
+  font-size: 4vmin;
+}
+.contactcontainer p {
+  padding: 0 9vmax;
+  font-size: 3vmin;
+}
+/* end contact text */
 }
